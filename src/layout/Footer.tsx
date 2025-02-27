@@ -8,7 +8,6 @@ const Footer = () => {
       transition={{ duration: 0.6, ease: "easeInOut" }}
       className="main-container flex flex-col lg:flex-row justify-center items-center gap-2 lg:gap-10 h-16 lg:h-10"
     >
-      {/* <div className="flex items-center gap-10 font-semibold"> */}
       <p className="text-sm">
         ©{new Date().getFullYear()} Global Media Group. All Rights Reserved.
       </p>
@@ -25,7 +24,6 @@ const Footer = () => {
             </a>
           </span>
         </p>
-        {/* </div> */}
       </div>
     </motion.section>
   );

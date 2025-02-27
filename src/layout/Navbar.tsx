@@ -27,21 +27,21 @@ const Navbar = () => {
   }, []);
 
   const handleSearch = (value?: string) => {
-    const searchValue = value?.trim() || inputValue.trim(); // Ensure fallback
+    const searchValue = value?.trim() || inputValue.trim();
 
-    if (!searchValue) return; // Prevent empty searches
+    if (!searchValue) return;
 
     dispatch(setSearchKeyword(searchValue));
 
     const updatedHistory = [
-      searchValue, // Use searchValue instead of inputValue
+      searchValue,
       ...searchHistory.filter((item) => item !== searchValue),
     ].slice(0, 5);
 
     setSearchHistory(updatedHistory);
     localStorage.setItem("searchHistory", JSON.stringify(updatedHistory));
 
-    setInputValue(""); // Clear input after search
+    setInputValue("");
     setOpenSearchModal(false);
     setShowSearchHistory(false);
     router.push(`/articles`);
@@ -55,7 +55,6 @@ const Navbar = () => {
 
   return (
     <>
-      {/* Desktop Navbar */}
       <motion.section
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
@@ -133,7 +132,6 @@ const Navbar = () => {
         </aside>
       </motion.section>
 
-      {/* Mobile Navbar */}
       <motion.section
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
@@ -161,7 +159,6 @@ const Navbar = () => {
           </div>
         </div>
 
-        {/* Mobile Sidebar */}
         <div
           className={`absolute top-0 left-0 z-10 flex h-screen w-screen bg-black/20 transition-transform duration-500 ${
             showNav ? "translate-x-0" : "-translate-x-full"
@@ -184,7 +181,6 @@ const Navbar = () => {
         </div>
       </motion.section>
 
-      {/* Search Modal (for mobile) */}
       <Dialog
         open={openSearchModal}
         onClose={() => setOpenSearchModal(false)}
@@ -202,7 +198,6 @@ const Navbar = () => {
             </button>
           </div>
 
-          {/* Search Input */}
           <div className="relative mt-2">
             <div className="flex items-center border p-2 rounded-md">
               <input
@@ -221,7 +216,6 @@ const Navbar = () => {
               </button>
             </div>
 
-            {/* Search History inside Modal (for mobile) */}
             {showSearchHistory && searchHistory.length > 0 && (
               <ul className="mt-2 bg-gray-100 shadow-md rounded-md max-h-[200px] overflow-y-auto">
                 {searchHistory.map((item, index) => (

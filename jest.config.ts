@@ -1,31 +1,15 @@
-// import { JestConfigWithTsJest } from "ts-jest";
-
-// const config: JestConfigWithTsJest = {
-//   preset: "ts-jest",
-//   testEnvironment: "jsdom", // Ensures Jest runs tests in a browser-like environment
-//   setupFilesAfterEnv: ["<rootDir>/jest.setup.ts"], // Setup file for Jest
-//   moduleNameMapper: {
-//     "^@/(.*)$": "<rootDir>/src/$1", // Supports absolute imports
-//   },
-//   testEnvironmentOptions: {
-//     customExportConditions: [""],
-//   },
-// };
-
-// export default config;
-
 import { JestConfigWithTsJest } from "ts-jest";
 
 const config: JestConfigWithTsJest = {
   preset: "ts-jest",
-  testEnvironment: "jsdom", // Ensures Jest runs tests in a browser-like environment
-  setupFilesAfterEnv: ["<rootDir>/jest.setup.ts"], // Setup file for Jest
+  testEnvironment: "jsdom", 
+  setupFilesAfterEnv: ["<rootDir>/jest.setup.ts"], 
   moduleNameMapper: {
-    "^@/(.*)$": "<rootDir>/src/$1", // Supports absolute imports
-    "\\.(css|scss|png|jpg|svg)$": "identity-obj-proxy", // Mocks static assets
+    "^@/(.*)$": "<rootDir>/src/$1", 
+    "\\.(css|scss|png|jpg|svg)$": "identity-obj-proxy",
   },
   transform: {
-    "^.+\\.(ts|tsx|js|jsx)$": "babel-jest", // Ensure JSX and TypeScript are processed
+    "^.+\\.(ts|tsx|js|jsx)$": "babel-jest",
   },
   testEnvironmentOptions: {
     customExportConditions: [""],

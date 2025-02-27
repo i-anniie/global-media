@@ -7,7 +7,6 @@ const NewsDetail = () => {
   const { title, description, urlToImage, content, source, publishedAt, url } =
     router.query;
 
-  // Ensure values are treated as strings
   const titleStr = Array.isArray(title) ? title[0] : title;
   const descriptionStr = Array.isArray(description)
     ? description[0]
