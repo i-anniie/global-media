@@ -9,11 +9,15 @@ const NewsDetail = () => {
 
   // Ensure values are treated as strings
   const titleStr = Array.isArray(title) ? title[0] : title;
-  const descriptionStr = Array.isArray(description) ? description[0] : description;
+  const descriptionStr = Array.isArray(description)
+    ? description[0]
+    : description;
   const urlToImageStr = Array.isArray(urlToImage) ? urlToImage[0] : urlToImage;
   const contentStr = Array.isArray(content) ? content[0] : content;
   const sourceStr = Array.isArray(source) ? source[0] : source;
-  const publishedAtStr = Array.isArray(publishedAt) ? publishedAt[0] : publishedAt;
+  const publishedAtStr = Array.isArray(publishedAt)
+    ? publishedAt[0]
+    : publishedAt;
   const urlStr = Array.isArray(url) ? url[0] : url;
 
   if (!titleStr) return <div className="text-center py-10">Loading...</div>;
@@ -21,7 +25,7 @@ const NewsDetail = () => {
   return (
     <PublicLayout>
       <motion.section
-        className="main-container py-6"
+        className="main-container md:min-h-[61rem] lg:min-h-[42rem] py-6"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}

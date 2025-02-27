@@ -3,6 +3,7 @@ import axios from "axios";
 import Loader from "@/components/Loader";
 import ArticleCard from "@/components/ArticleCard";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 interface Article {
   title: string;
@@ -52,6 +53,19 @@ const TopArticles = () => {
           </motion.div>
         ))}
       </div>
+      <motion.div
+        className="text-center"
+        initial={{ opacity: 0, y: 10 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5, delay: 0.5 }}
+      >
+        <Link href="/articles">
+          <button className="px-4 py-2 rounded-md bg-blue-600 text-white">
+            Show More
+          </button>
+        </Link>
+      </motion.div>
     </section>
   );
 };

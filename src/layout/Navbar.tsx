@@ -60,7 +60,7 @@ const Navbar = () => {
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6, ease: "easeInOut" }}
-        className="sticky top-0 z-[999] hidden bg-black text-white h-16 lg:flex justify-center items-center shadow"
+        className="sticky top-0 z-[999] hidden bg-black text-white h-16 md:flex justify-center items-center shadow"
       >
         <aside className="main-container flex justify-between items-center">
           <div className="flex items-center gap-6">
@@ -138,7 +138,7 @@ const Navbar = () => {
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
-        className="sticky top-0 z-[999] block bg-white lg:hidden"
+        className="sticky top-0 z-[999] block bg-white md:hidden"
       >
         <div className="main-container flex items-center justify-between py-4 shadow">
           <Link href="/" className="text-xl font-bold">

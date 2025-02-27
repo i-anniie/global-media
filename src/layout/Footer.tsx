@@ -6,7 +6,7 @@ const Footer = () => {
       initial={{ y: 30, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, ease: "easeInOut" }}
-      className="main-container flex flex-col lg:flex-row justify-center items-center gap-2 lg:gap-10 h-10"
+      className="main-container flex flex-col lg:flex-row justify-center items-center gap-2 lg:gap-10 h-16 lg:h-10"
     >
       {/* <div className="flex items-center gap-10 font-semibold"> */}
       <p className="text-sm">
